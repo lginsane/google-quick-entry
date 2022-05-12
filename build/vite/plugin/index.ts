@@ -1,8 +1,10 @@
 import type { Plugin } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+import { configSvgIconsPlugin } from './svgIcons'
 import { autoRegistryComponents } from './component'
 import { AutoImportDeps } from './autoImport'
+import { configCompressPlugin } from './compress'
 
 export function createVitePlugins(isBuild: boolean) {
   const vitePlugins: (Plugin | Plugin[])[] = [
@@ -12,5 +14,11 @@ export function createVitePlugins(isBuild: boolean) {
     // 自动按需引入依赖
     AutoImportDeps()
   ]
-  return vitePlugins;
+
+  // 字体图标
+  vitePlugins.push(configSvgIconsPlugin(isBuild))
+
+  // 压缩
+  isBuild && vitePlugins.push(configCompressPlugin())
+  return vitePlugins
 }

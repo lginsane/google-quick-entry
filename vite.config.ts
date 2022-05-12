@@ -21,7 +21,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         // /@/xxxx => src/xxxx
         { find: /^~/, replacement: resolve(__dirname, '') },
         {
-          find: /\/@\//,
+          find: /@\//,
           replacement: pathResolve('src') + '/'
         }
       ]
