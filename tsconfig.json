@@ -23,9 +23,23 @@
     "skipLibCheck": true,
     "paths": {
       "@/*": ["src/*"],
-      "#/*": ["types/*"]
+      "/#/*": ["types/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "types/**/*.ts", "types/**/*.d.ts", "build/**/*.ts", "build/**/*.d.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "types/**/*.d.ts",
+    "types/**/*.ts",
+    "build/**/*.ts",
+    "build/**/*.d.ts",
+    "mock/**/*.ts",
+    "components.d.ts",
+    "vite.config.ts",
+    "auto-imports.d.ts"
+  ],
+  "exclude": ["node_modules", "dist", "**/*.js"]
   // "references": [{ "path": "./tsconfig.node.json" }]
 }
