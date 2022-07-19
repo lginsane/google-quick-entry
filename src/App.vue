@@ -18,6 +18,10 @@
 </template>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+}
 #app,
 body,
 html,

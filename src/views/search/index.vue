@@ -33,7 +33,7 @@ const searchOptions = [
     {
         icon: npm,
         title: 'npm',
-        text: '包管理',
+        text: 'NPM',
         url: 'https://www.npmjs.com/search?q='
     }
 ]
