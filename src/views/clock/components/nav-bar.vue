@@ -42,7 +42,7 @@ function handleOpenUrl(url: string): void {
       @click="handleOpenUrl(nav.url)"
     >
       <template v-if="nav.img">
-        <img style="height: 35px;" :src="nav.img" alt="" />
+        <img :src="nav.img" alt="" />
         <!-- <SvgIcon :name="nav.img" size="100"></SvgIcon> -->
       </template>
       <span v-else>{{ nav.text }}</span>
@@ -50,7 +50,7 @@ function handleOpenUrl(url: string): void {
   </div>
 </template>
 
-<style>
+<style lang="scss">
 .nav-bar {
   width: 70%;
   display: flex;
@@ -60,7 +60,11 @@ function handleOpenUrl(url: string): void {
   box-sizing: border-box;
 }
 .nav-bar-item {
-  margin: 0 10px;
+  margin: 10px;
   cursor: pointer;
+  img {
+    width: 100px;
+    height: 35px;
+  }
 }
 </style>
