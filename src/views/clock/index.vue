@@ -22,7 +22,7 @@ html, body, #app {
 .clock-container {
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #69410c 0%, #89819a 100%);;
+  background: linear-gradient(to right, #69410c 0%, #89819a 100%);
   display: flex;
   align-items: center;
   flex-direction: column;
