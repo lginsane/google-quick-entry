@@ -10,6 +10,20 @@ const constantRouter: Array<RouteRecordRaw> = [
     component: () =>
       import(/* webpackChunkName: "clock" */ '../views/clock/index.vue'),
     meta: { title: '时间' }
+  },
+  {
+    path: '/navigation',
+    name: 'Navigation',
+    component: () =>
+      import(/* webpackChunkName: "clock" */ '../views/navigation/index.vue'),
+    meta: { title: '导航栏/收藏夹' }
+  },
+  {
+    path: '/search',
+    name: 'Search',
+    component: () =>
+      import(/* webpackChunkName: "clock" */ '../views/search/index.vue'),
+    meta: { title: '搜索' }
   }
 ]
 
